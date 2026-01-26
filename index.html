@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EquiSource Group LLC | Development Finance & Humanitarian Infrastructure</title>
+    <title>EquiSource Group LLC | Humanitarian Development & Financial Infrastructure Support</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -17,7 +17,6 @@
             --green: #2d6a4f;
             --green-light: #40916c;
             --white: #ffffff;
-            --cream: #fdfcfa;
             --gray-50: #f8f9fa;
             --gray-100: #f1f3f5;
             --gray-200: #e9ecef;
@@ -30,16 +29,8 @@
             --border: #e0e4e8;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 16px;
@@ -47,48 +38,27 @@
             line-height: 1.7;
             background: var(--white);
         }
-
         h1, h2, h3, h4 {
             font-family: 'Merriweather', Georgia, serif;
             color: var(--navy);
             line-height: 1.4;
         }
+        a { color: var(--navy); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-        a {
-            color: var(--navy);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           HEADER
-        ════════════════════════════════════════════════════════════════════════ */
-
+        /* TOP BAR */
         .top-bar {
             background: var(--navy-dark);
-            padding: 8px 0;
+            padding: 10px 0;
             font-size: 13px;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,0.8);
         }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+        .top-bar a { color: var(--gold-light); }
+        .top-bar a:hover { color: var(--white); }
 
-        .top-bar .container {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .top-bar a {
-            color: var(--gold-light);
-        }
-
+        /* HEADER */
         header {
             background: var(--white);
             border-bottom: 1px solid var(--border);
@@ -96,891 +66,183 @@
             top: 0;
             z-index: 100;
         }
-
         .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 16px 0;
         }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-        }
-
-        .logo:hover {
-            text-decoration: none;
-        }
-
-        .logo-mark {
-            width: 48px;
-            height: 48px;
-            position: relative;
-        }
-
-        .logo-mark svg {
-            width: 100%;
-            height: 100%;
-        }
-
+        .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+        .logo:hover { text-decoration: none; }
+        .logo-mark { width: 44px; height: 44px; background: var(--navy); display: flex; align-items: center; justify-content: center; }
+        .logo-mark span { font-family: 'Merriweather', serif; font-size: 22px; font-weight: 700; color: var(--gold-light); }
         .logo-text h1 {
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             color: var(--navy);
             margin: 0;
         }
-
-        .logo-text span {
-            font-size: 12px;
-            color: var(--gray-500);
-            letter-spacing: 0.02em;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 8px;
-            list-style: none;
-            align-items: center;
-        }
-
+        .logo-text small { font-size: 11px; color: var(--gray-500); display: block; margin-top: 2px; }
+        nav ul { display: flex; gap: 4px; list-style: none; align-items: center; }
         nav a {
             display: block;
-            padding: 10px 16px;
-            font-size: 15px;
+            padding: 10px 14px;
+            font-size: 14px;
             color: var(--gray-600);
             font-weight: 500;
-            transition: color 0.2s;
         }
+        nav a:hover { color: var(--navy); text-decoration: none; }
+        .nav-cta { background: var(--navy); color: var(--white) !important; margin-left: 8px; }
+        .nav-cta:hover { background: var(--navy-light); }
 
-        nav a:hover {
-            color: var(--navy);
-            text-decoration: none;
-        }
-
-        .nav-cta {
-            background: var(--navy);
-            color: var(--white) !important;
-            margin-left: 8px;
-        }
-
-        .nav-cta:hover {
-            background: var(--navy-light);
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           HERO
-        ════════════════════════════════════════════════════════════════════════ */
-
+        /* HERO */
         .hero {
-            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-size: 38px;
-            color: var(--white);
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .hero-content p {
-            font-size: 18px;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 28px;
-            line-height: 1.8;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .btn-primary {
-            background: var(--gold);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: var(--gold-light);
-            text-decoration: none;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid rgba(255,255,255,0.4);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--white);
-            text-decoration: none;
-        }
-
-        .hero-stats {
-            background: var(--white);
-            padding: 32px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-        }
-
-        .hero-stats h3 {
-            font-size: 14px;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-weight: 600;
-            color: var(--gray-500);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
+            background: var(--gray-50);
+            padding: 50px 0;
             border-bottom: 1px solid var(--border);
         }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center; }
+        .hero h1 { font-size: 30px; color: var(--navy); margin-bottom: 16px; }
+        .hero p { font-size: 17px; color: var(--gray-600); margin-bottom: 20px; line-height: 1.8; }
+        .hero-buttons { display: flex; gap: 12px; }
+        .btn { display: inline-block; padding: 12px 24px; font-size: 14px; font-weight: 600; text-decoration: none; }
+        .btn-primary { background: var(--navy); color: var(--white); }
+        .btn-primary:hover { background: var(--navy-light); text-decoration: none; }
+        .btn-outline { background: var(--white); color: var(--navy); border: 1px solid var(--border); }
+        .btn-outline:hover { border-color: var(--navy); text-decoration: none; }
 
-        .stat-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--gray-100);
+        .hero-card { background: var(--white); border: 1px solid var(--border); padding: 24px; }
+        .hero-card h3 { font-size: 13px; font-family: 'Source Sans Pro', sans-serif; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+        .hero-stat { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--gray-100); }
+        .hero-stat:last-child { border-bottom: none; }
+        .hero-stat-label { font-size: 14px; color: var(--gray-500); }
+        .hero-stat-value { font-weight: 700; color: var(--navy); }
+        .hero-stat-value.green { color: var(--green); }
+
+        /* SCOPE BOX */
+        .scope-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--gold);
+            padding: 16px 20px;
+            margin: 30px 0;
         }
+        .scope-box h4 { font-size: 12px; font-family: 'Source Sans Pro', sans-serif; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+        .scope-box p { font-size: 14px; color: var(--gray-600); margin: 0; }
 
-        .stat-row:last-child {
-            border-bottom: none;
-        }
+        /* SECTIONS */
+        .section { padding: 50px 0; border-bottom: 1px solid var(--border); }
+        .section:last-of-type { border-bottom: none; }
+        .section-label { font-size: 12px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+        .section h2 { font-size: 24px; margin-bottom: 14px; }
+        .section > .container > p { color: var(--gray-600); margin-bottom: 14px; max-width: 800px; }
 
-        .stat-label {
-            font-size: 14px;
-            color: var(--gray-500);
-        }
-
-        .stat-value {
-            font-family: 'Merriweather', serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--navy);
-        }
-
-        .stat-value.highlight {
-            color: var(--green);
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           MISSION BAR
-        ════════════════════════════════════════════════════════════════════════ */
-
-        .mission-bar {
+        /* HUMANITARIAN BANNER */
+        .humanitarian-banner {
             background: var(--green);
-            padding: 20px 0;
+            padding: 16px 0;
             color: var(--white);
         }
-
-        .mission-bar .container {
+        .humanitarian-banner .container {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 40px;
-            text-align: center;
+            flex-wrap: wrap;
         }
-
-        .mission-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 15px;
-            font-weight: 500;
-        }
-
-        .mission-item svg {
-            width: 22px;
-            height: 22px;
-            stroke: rgba(255,255,255,0.8);
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           SECTIONS
-        ════════════════════════════════════════════════════════════════════════ */
-
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
-
-        .section-label {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin-bottom: 12px;
-        }
-
-        .section-header h2 {
-            font-size: 32px;
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            font-size: 17px;
-            color: var(--gray-500);
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           ABOUT SECTION
-        ════════════════════════════════════════════════════════════════════════ */
-
-        .about {
-            background: var(--gray-50);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-content h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .about-content p {
-            margin-bottom: 16px;
-            color: var(--gray-600);
-        }
-
-        .about-list {
-            list-style: none;
-            margin-top: 24px;
-        }
-
-        .about-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 10px 0;
-        }
-
-        .about-list svg {
-            width: 20px;
-            height: 20px;
-            stroke: var(--green);
-            flex-shrink: 0;
-            margin-top: 3px;
-        }
-
-        .about-list span {
-            color: var(--gray-700);
-        }
-
-        .about-visual {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .about-card {
-            background: var(--white);
-            padding: 28px 24px;
-            border: 1px solid var(--border);
-            text-align: center;
-        }
-
-        .about-card.featured {
-            grid-column: span 2;
-            background: var(--navy);
-            border: none;
-        }
-
-        .about-card.featured .card-value {
-            color: var(--gold-light);
-        }
-
-        .about-card.featured .card-label {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .card-value {
-            font-family: 'Merriweather', serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--navy);
-            margin-bottom: 6px;
-        }
-
-        .card-label {
-            font-size: 14px;
-            color: var(--gray-500);
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           SERVICES SECTION
-        ════════════════════════════════════════════════════════════════════════ */
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .service-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            padding: 32px 28px;
-            transition: all 0.3s;
-        }
-
-        .service-card:hover {
-            border-color: var(--navy);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        }
-
-        .service-icon {
-            width: 52px;
-            height: 52px;
-            background: var(--navy);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .service-icon svg {
-            width: 26px;
-            height: 26px;
-            stroke: var(--gold-light);
-        }
-
-        .service-card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            font-size: 15px;
-            color: var(--gray-500);
-            margin-bottom: 16px;
-        }
-
-        .service-features {
-            list-style: none;
-            padding-top: 16px;
-            border-top: 1px solid var(--gray-100);
-        }
-
-        .service-features li {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: var(--gray-600);
-            padding: 6px 0;
-        }
-
-        .service-features svg {
-            width: 16px;
-            height: 16px;
-            stroke: var(--green);
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           IMPACT SECTION
-        ════════════════════════════════════════════════════════════════════════ */
-
-        .impact {
-            background: var(--navy);
-            color: var(--white);
-        }
-
-        .impact .section-label {
-            color: var(--gold-light);
-        }
-
-        .impact .section-header h2 {
-            color: var(--white);
-        }
-
-        .impact .section-header p {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .impact-card {
-            text-align: center;
-            padding: 24px;
-        }
-
-        .impact-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
-        }
-
-        .impact-icon svg {
-            width: 28px;
-            height: 28px;
-            stroke: var(--gold-light);
-        }
-
-        .impact-card h4 {
-            font-family: 'Merriweather', serif;
-            font-size: 32px;
-            color: var(--white);
-            margin-bottom: 8px;
-        }
-
-        .impact-card p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.7);
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           PROCESS SECTION
-        ════════════════════════════════════════════════════════════════════════ */
-
-        .process {
-            background: var(--gray-50);
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .process-step {
-            text-align: center;
-            position: relative;
-        }
-
-        .process-step::after {
-            content: '';
-            position: absolute;
-            top: 28px;
-            right: -15px;
-            width: 30px;
-            height: 2px;
-            background: var(--border);
-        }
-
-        .process-step:last-child::after {
-            display: none;
-        }
-
-        .step-number {
-            width: 56px;
-            height: 56px;
-            background: var(--navy);
-            color: var(--white);
-            font-family: 'Merriweather', serif;
-            font-size: 24px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-        }
-
-        .process-step h4 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .process-step p {
-            font-size: 14px;
-            color: var(--gray-500);
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           ENTITY INFO
-        ════════════════════════════════════════════════════════════════════════ */
-
-        .entity-section {
-            background: var(--white);
-        }
-
-        .entity-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-
-        .entity-info h3 {
-            font-size: 22px;
-            margin-bottom: 24px;
-        }
-
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .info-table tr {
-            border-bottom: 1px solid var(--border);
-        }
-
-        .info-table th,
-        .info-table td {
-            padding: 14px 0;
-            text-align: left;
-            font-size: 15px;
-        }
-
-        .info-table th {
-            color: var(--gray-500);
-            font-weight: 500;
-            width: 160px;
-        }
-
-        .info-table td {
-            color: var(--gray-800);
-            font-weight: 600;
-        }
-
-        .compliance-box {
-            background: var(--gray-50);
-            padding: 28px;
-            border: 1px solid var(--border);
-        }
-
-        .compliance-box h4 {
-            font-size: 16px;
-            margin-bottom: 16px;
-        }
-
-        .compliance-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .compliance-item {
+        .humanitarian-item {
             display: flex;
             align-items: center;
             gap: 10px;
             font-size: 14px;
-            color: var(--gray-600);
+            font-weight: 500;
         }
+        .humanitarian-item svg { width: 20px; height: 20px; stroke: rgba(255,255,255,0.8); fill: none; }
 
-        .compliance-item svg {
-            width: 18px;
-            height: 18px;
-            stroke: var(--green);
+        /* INFO TABLE */
+        .info-table { width: 100%; max-width: 520px; border-collapse: collapse; margin: 20px 0; font-size: 15px; }
+        .info-table th, .info-table td { padding: 11px 0; text-align: left; border-bottom: 1px solid var(--border); }
+        .info-table th { color: var(--gray-500); font-weight: 500; width: 170px; }
+        .info-table td { color: var(--gray-800); }
+
+        /* TWO COLUMN */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 24px; }
+        .col-box { background: var(--gray-50); padding: 22px; border: 1px solid var(--border); }
+        .col-box h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+        .col-box p { font-size: 14px; color: var(--gray-600); margin: 0 0 10px 0; }
+        .col-box ul { margin: 10px 0 0 18px; font-size: 14px; color: var(--gray-600); }
+        .col-box li { margin-bottom: 5px; }
+
+        /* SERVICES */
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+        .service-card { background: var(--white); border: 1px solid var(--border); padding: 22px; }
+        .service-card h3 { font-size: 16px; margin-bottom: 8px; }
+        .service-card p { font-size: 14px; color: var(--gray-500); margin: 0; }
+
+        /* PROCESS BOX */
+        .process-box { background: var(--gray-50); border: 1px solid var(--border); padding: 24px; margin: 20px 0; }
+        .process-box h3 { font-size: 17px; margin-bottom: 14px; color: var(--navy); }
+        .process-box ol { margin: 0 0 0 20px; color: var(--gray-700); }
+        .process-box li { margin-bottom: 8px; padding-left: 6px; }
+        .process-box p { font-size: 14px; color: var(--gray-600); margin-top: 14px; }
+
+        /* IMPACT GRID */
+        .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 24px; }
+        .impact-card { background: var(--white); border: 1px solid var(--border); padding: 20px; text-align: center; }
+        .impact-icon { width: 48px; height: 48px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+        .impact-icon svg { width: 24px; height: 24px; stroke: var(--white); fill: none; }
+        .impact-card h4 { font-size: 15px; margin-bottom: 6px; }
+        .impact-card p { font-size: 13px; color: var(--gray-500); margin: 0; }
+
+        /* TEAM */
+        .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; max-width: 600px; }
+        .team-card { background: var(--white); border: 1px solid var(--border); padding: 18px; display: flex; gap: 14px; align-items: center; }
+        .team-avatar { width: 50px; height: 50px; background: var(--navy); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .team-avatar span { font-family: 'Merriweather', serif; font-size: 16px; color: var(--gold-light); font-weight: 700; }
+        .team-info h4 { font-size: 15px; margin-bottom: 2px; }
+        .team-info p { font-size: 12px; color: var(--gold); font-weight: 600; margin: 0; }
+
+        /* CONTACT */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; margin-top: 20px; }
+        .contact-item { margin-bottom: 18px; }
+        .contact-item h5 { font-size: 11px; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+        .contact-item p { color: var(--gray-800); font-size: 15px; margin: 0; line-height: 1.5; }
+        .contact-item a { color: var(--navy); font-weight: 600; }
+        .contact-form { background: var(--gray-50); padding: 24px; border: 1px solid var(--border); }
+        .contact-form h3 { font-size: 17px; margin-bottom: 18px; }
+        .form-row { margin-bottom: 12px; }
+        .form-row label { display: block; font-size: 13px; font-weight: 600; color: var(--gray-700); margin-bottom: 4px; }
+        .form-row input, .form-row select, .form-row textarea { width: 100%; padding: 10px 12px; font-family: inherit; font-size: 14px; border: 1px solid var(--gray-300); background: var(--white); }
+        .form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: none; border-color: var(--navy); }
+        .form-row textarea { resize: vertical; min-height: 70px; }
+        .form-submit { width: 100%; padding: 12px; background: var(--navy); color: var(--white); font-family: inherit; font-size: 14px; font-weight: 600; border: none; cursor: pointer; }
+        .form-submit:hover { background: var(--navy-light); }
+
+        /* FOOTER */
+        footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 40px 0; }
+        .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+        .footer-brand .logo-mark { background: rgba(255,255,255,0.1); }
+        .footer-brand p { font-size: 13px; margin-top: 12px; max-width: 280px; line-height: 1.6; }
+        .footer-contact h5 { font-size: 12px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+        .footer-contact p { font-size: 13px; margin-bottom: 6px; }
+        .footer-contact a { color: var(--gold-light); }
+        .footer-bottom { margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: rgba(255,255,255,0.5); }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .impact-grid { grid-template-columns: 1fr 1fr; }
+            .two-col, .contact-grid, .team-grid { grid-template-columns: 1fr; }
         }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           CONTACT SECTION
-        ════════════════════════════════════════════════════════════════════════ */
-
-        .contact {
-            background: var(--gray-50);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
-        }
-
-        .contact-info h3 {
-            font-size: 22px;
-            margin-bottom: 24px;
-        }
-
-        .contact-item {
-            margin-bottom: 24px;
-        }
-
-        .contact-item h5 {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--gray-400);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 6px;
-        }
-
-        .contact-item p {
-            color: var(--gray-800);
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .contact-form-box {
-            background: var(--white);
-            padding: 36px;
-            border: 1px solid var(--border);
-        }
-
-        .contact-form-box h3 {
-            font-size: 20px;
-            margin-bottom: 24px;
-        }
-
-        .form-row {
-            margin-bottom: 18px;
-        }
-
-        .form-row label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--gray-700);
-            margin-bottom: 6px;
-        }
-
-        .form-row input,
-        .form-row select,
-        .form-row textarea {
-            width: 100%;
-            padding: 12px 14px;
-            font-family: inherit;
-            font-size: 15px;
-            border: 1px solid var(--gray-300);
-            background: var(--white);
-            transition: border-color 0.2s;
-        }
-
-        .form-row input:focus,
-        .form-row select:focus,
-        .form-row textarea:focus {
-            outline: none;
-            border-color: var(--navy);
-        }
-
-        .form-row textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .form-row-half {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .form-submit {
-            width: 100%;
-            padding: 14px;
-            background: var(--navy);
-            color: var(--white);
-            font-family: inherit;
-            font-size: 15px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .form-submit:hover {
-            background: var(--navy-light);
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           FOOTER
-        ════════════════════════════════════════════════════════════════════════ */
-
-        footer {
-            background: var(--navy-dark);
-            color: rgba(255,255,255,0.7);
-            padding: 60px 0 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 50px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .footer-brand .logo-text h1 {
-            color: var(--white);
-        }
-
-        .footer-brand p {
-            font-size: 14px;
-            margin-top: 16px;
-            line-height: 1.7;
-        }
-
-        .footer-col h5 {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--white);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 18px;
-        }
-
-        .footer-col ul {
-            list-style: none;
-        }
-
-        .footer-col li {
-            margin-bottom: 10px;
-        }
-
-        .footer-col a {
-            font-size: 14px;
-            color: rgba(255,255,255,0.6);
-            transition: color 0.2s;
-        }
-
-        .footer-col a:hover {
-            color: var(--gold-light);
-            text-decoration: none;
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 24px;
-            font-size: 13px;
-        }
-
-        .footer-bottom a {
-            color: rgba(255,255,255,0.5);
-            margin-left: 24px;
-        }
-
-        /* ════════════════════════════════════════════════════════════════════════
-           RESPONSIVE
-        ════════════════════════════════════════════════════════════════════════ */
-
-        @media (max-width: 1024px) {
-            .hero .container,
-            .about-grid,
-            .entity-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .impact-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-step::after {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .top-bar {
-                display: none;
-            }
-
-            nav ul {
-                display: none;
-            }
-
-            .hero {
-                padding: 60px 0;
-            }
-
-            .hero-content h1 {
-                font-size: 28px;
-            }
-
-            .mission-bar .container {
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            .services-grid,
-            .impact-grid,
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-
-            .about-visual {
-                grid-template-columns: 1fr;
-            }
-
-            .about-card.featured {
-                grid-column: span 1;
-            }
-
-            .compliance-list {
-                grid-template-columns: 1fr;
-            }
-
-            .form-row-half {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 12px;
-                text-align: center;
-            }
-
-            .footer-bottom a {
-                margin: 0 12px;
-            }
+        @media (max-width: 600px) {
+            .top-bar .container { flex-direction: column; gap: 4px; text-align: center; }
+            nav ul { display: none; }
+            .hero h1 { font-size: 24px; }
+            .services-grid, .impact-grid { grid-template-columns: 1fr; }
+            .humanitarian-banner .container { flex-direction: column; gap: 12px; }
+            .footer-inner { flex-direction: column; }
         }
     </style>
 </head>
@@ -989,8 +251,8 @@
     <!-- TOP BAR -->
     <div class="top-bar">
         <div class="container">
-            <span>Wyoming, USA · Entity ID: 2026-001873415</span>
-            <span>Inquiries: <a href="mailto:info@equisourcegroup.com">info@equisourcegroup.com</a></span>
+            <span>Wyoming, USA</span>
+            <span><a href="tel:+18776040520">(877) 604-0520</a> · <a href="mailto:Support@EquiSourceGroup.com">Support@EquiSourceGroup.com</a></span>
         </div>
     </div>
 
@@ -998,31 +260,19 @@
     <header>
         <div class="container">
             <div class="header-inner">
-                <a href="#" class="logo">
-                    <div class="logo-mark">
-                        <svg viewBox="0 0 100 120">
-                            <defs>
-                                <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#9a8255"/>
-                                    <stop offset="100%" style="stop-color:#c4a96a"/>
-                                </linearGradient>
-                            </defs>
-                            <path d="M50 5 L95 35 L95 85 L50 115 L5 85 L5 35 Z" fill="#1a3a52"/>
-                            <path d="M50 20 L80 40 L80 80 L50 100 L20 80 L20 40 Z" fill="none" stroke="url(#logoGold)" stroke-width="2"/>
-                            <text x="50" y="68" font-family="Merriweather, serif" font-size="36" font-weight="700" fill="url(#logoGold)" text-anchor="middle">E</text>
-                        </svg>
-                    </div>
+                <a href="#top" class="logo">
+                    <div class="logo-mark"><span>E</span></div>
                     <div class="logo-text">
-                        <h1>EquiSource Group</h1>
-                        <span>Development Finance & Infrastructure</span>
+                        <h1>EquiSource Group, LLC</h1>
+                        <small>Humanitarian Development & Infrastructure Support</small>
                     </div>
                 </a>
                 <nav>
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#capital">Capital Ledger</a></li>
                         <li><a href="#impact">Impact</a></li>
-                        <li><a href="#process">Process</a></li>
                         <li><a href="#contact" class="nav-cta">Contact</a></li>
                     </ul>
                 </nav>
@@ -1031,331 +281,298 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="top">
         <div class="container">
-            <div class="hero-content">
-                <h1>Financial Infrastructure for Humanitarian Development</h1>
-                <p>EquiSource Group enables sovereign institutions and development partners to mobilize capital for infrastructure, healthcare, education, and economic empowerment across emerging markets.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Partner With Us</a>
-                    <a href="#services" class="btn btn-outline">Our Approach</a>
+            <div class="hero-grid">
+                <div>
+                    <h1>Supporting Humanitarian Development Through Financial Infrastructure</h1>
+                    <p>EquiSource Group provides technical support services for partners working in banking, investment, and custodial services. We help facilitate capital recognition and ledger operations that fund humanitarian initiatives worldwide.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Partner With Us</a>
+                        <a href="#capital" class="btn btn-outline">Capital Ledger Process</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-stats">
-                <h3>Capital Deployment Framework</h3>
-                <div class="stat-row">
-                    <span class="stat-label">Humanitarian Allocation</span>
-                    <span class="stat-value highlight">30%</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Infrastructure Investment</span>
-                    <span class="stat-value">70%</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Target Regions</span>
-                    <span class="stat-value">Africa · Asia · Americas</span>
-                </div>
-                <div class="stat-row">
-                    <span class="stat-label">Settlement</span>
-                    <span class="stat-value">Multi-Currency</span>
+                <div class="hero-card">
+                    <h3>Capital Allocation Framework</h3>
+                    <div class="hero-stat">
+                        <span class="hero-stat-label">Humanitarian Programs</span>
+                        <span class="hero-stat-value green">30%</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-label">Infrastructure Development</span>
+                        <span class="hero-stat-value">70%</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-label">Target Regions</span>
+                        <span class="hero-stat-value">Africa · Asia · Americas</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-label">Fiat Currencies</span>
+                        <span class="hero-stat-value">180+</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MISSION BAR -->
-    <section class="mission-bar">
+    <!-- HUMANITARIAN BANNER -->
+    <section class="humanitarian-banner">
         <div class="container">
-            <div class="mission-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                <span>Humanitarian Impact</span>
+            <div class="humanitarian-item">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                <span>Healthcare Access</span>
             </div>
-            <div class="mission-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                <span>Infrastructure Development</span>
+            <div class="humanitarian-item">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                <span>Education Programs</span>
             </div>
-            <div class="mission-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                <span>Economic Empowerment</span>
+            <div class="humanitarian-item">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                <span>Food Security</span>
             </div>
-            <div class="mission-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                <span>Global Reach</span>
+            <div class="humanitarian-item">
+                <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <span>Clean Energy & Water</span>
             </div>
         </div>
     </section>
+
+    <!-- SCOPE LIMITATION -->
+    <div class="container">
+        <div class="scope-box">
+            <h4>Scope of Services</h4>
+            <p>EquiSource Group provides technical support, documentation services, and infrastructure assistance. We do not provide financial advice, custody services, payment processing, or public solicitation. We support partners who perform those functions.</p>
+        </div>
+    </div>
 
     <!-- ABOUT -->
-    <section class="section about" id="about">
+    <section class="section" id="about">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <div class="section-label">About EquiSource Group</div>
-                    <h2>Mobilizing Capital for Development</h2>
-                    <p>EquiSource Group LLC is a Wyoming-based financial infrastructure company specializing in capital mobilization for humanitarian and development initiatives across emerging markets.</p>
-                    <p>We partner with sovereign institutions, development banks, and impact investors to structure and deploy capital that creates measurable social and economic outcomes while maintaining institutional-grade financial controls.</p>
-                    <ul class="about-list">
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>30% mandatory humanitarian allocation on all deployments</span>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Multi-currency settlement across 180+ currencies</span>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Transparent audit trail and impact reporting</span>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Compliant with IFRS and US GAAP standards</span>
-                        </li>
+            <div class="section-label">About Us</div>
+            <h2>Supporting Partners in Humanitarian Finance</h2>
+            <p>EquiSource Group LLC is a Wyoming limited liability company providing technical support services for partners in banking, investment, and custodial operations. We help facilitate the documentation and administrative processes that enable capital to flow toward humanitarian development.</p>
+            <p>Our role is supportive — we prepare documentation, assist with ledger operations, and provide technical infrastructure that helps our partners execute their missions efficiently.</p>
+
+            <div class="two-col">
+                <div class="col-box">
+                    <h4>What We Do</h4>
+                    <ul>
+                        <li>Prepare documentation for capital recognition</li>
+                        <li>Support ledger operations and record-keeping</li>
+                        <li>Provide technical infrastructure assistance</li>
+                        <li>Facilitate multi-currency conversion support</li>
+                        <li>Assist with compliance documentation</li>
                     </ul>
                 </div>
-                <div class="about-visual">
-                    <div class="about-card featured">
-                        <div class="card-value">30%</div>
-                        <div class="card-label">Humanitarian Allocation</div>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-value">180+</div>
-                        <div class="card-label">Currencies Supported</div>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-value">24/7</div>
-                        <div class="card-label">Settlement Operations</div>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-value">100%</div>
-                        <div class="card-label">Auditable Transactions</div>
-                    </div>
+                <div class="col-box">
+                    <h4>Who We Support</h4>
+                    <ul>
+                        <li>Banking institutions</li>
+                        <li>Investment partners</li>
+                        <li>Custodial service providers</li>
+                        <li>Development finance organizations</li>
+                        <li>Humanitarian program administrators</li>
+                    </ul>
                 </div>
             </div>
+
+            <h3 style="margin-top: 30px; font-size: 18px;">Entity Information</h3>
+            <table class="info-table">
+                <tr>
+                    <th>Legal Name</th>
+                    <td>EquiSource Group LLC</td>
+                </tr>
+                <tr>
+                    <th>Entity Type</th>
+                    <td>Wyoming LLC (Manager-Managed)</td>
+                </tr>
+                <tr>
+                    <th>Date of Formation</th>
+                    <td>January 20, 2026</td>
+                </tr>
+                <tr>
+                    <th>Registered Agent</th>
+                    <td>Registered Agents Inc<br>30 N Gould St, Ste R, Sheridan, WY 82801</td>
+                </tr>
+                <tr>
+                    <th>NAICS Codes</th>
+                    <td>541512, 541511, 541690</td>
+                </tr>
+            </table>
         </div>
     </section>
 
     <!-- SERVICES -->
     <section class="section" id="services">
         <div class="container">
-            <div class="section-header">
-                <div class="section-label">Our Services</div>
-                <h2>Development Finance Solutions</h2>
-                <p>Comprehensive financial infrastructure designed for sovereign institutions, development banks, and impact investors.</p>
-            </div>
+            <div class="section-label">Our Services</div>
+            <h2>Technical Support & Documentation</h2>
+            <p>We provide the supporting services that help our partners execute capital recognition and humanitarian funding operations.</p>
+
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </div>
-                    <h3>Capital Recognition</h3>
-                    <p>Structured documentation for recognizing contributed assets on institutional balance sheets.</p>
-                    <ul class="service-features">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> IFRS & GAAP compliant</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Audit-ready documentation</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Fair value attestation</li>
-                    </ul>
+                    <h3>Documentation Preparation</h3>
+                    <p>Booking instructions, attestations, and supporting records for capital recognition processes.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </div>
-                    <h3>Multi-Currency Settlement</h3>
-                    <p>Convert and settle in any global currency with institutional-grade execution.</p>
-                    <ul class="service-features">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 180+ currencies</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Same-day conversion</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Competitive FX rates</li>
-                    </ul>
+                    <h3>Ledger Support</h3>
+                    <p>Technical assistance for reconciled record-keeping and booked position management.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                    </div>
-                    <h3>Institutional Custody</h3>
-                    <p>Bank-grade custody solutions with multi-signature controls and insurance coverage.</p>
-                    <ul class="service-features">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Qualified custodian</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Multi-sig controls</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Insurance coverage</li>
-                    </ul>
+                    <h3>Compliance Records</h3>
+                    <p>Preparation of audit-ready documentation meeting IFRS and GAAP requirements.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                    </div>
-                    <h3>Infrastructure Finance</h3>
-                    <p>Project finance solutions for transportation, energy, healthcare, and education infrastructure.</p>
-                    <ul class="service-features">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Project structuring</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Blended finance</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Impact measurement</li>
-                    </ul>
+                    <h3>Technical Infrastructure</h3>
+                    <p>System access and support for partners requiring digital record management.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                    </div>
-                    <h3>Humanitarian Programs</h3>
-                    <p>Direct funding for healthcare, education, food security, and emergency relief programs.</p>
-                    <ul class="service-features">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 30% allocation mandate</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Direct disbursement</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Impact tracking</li>
-                    </ul>
+                    <h3>Conversion Assistance</h3>
+                    <p>Support for multi-currency operations across 180+ global currencies.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                    </div>
-                    <h3>Reporting & Compliance</h3>
-                    <p>Comprehensive reporting for regulators, auditors, and stakeholders.</p>
-                    <ul class="service-features">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Impact reporting</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Regulatory filings</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Audit support</li>
-                    </ul>
+                    <h3>Integration Support</h3>
+                    <p>Technical assistance for partners integrating with existing banking systems.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAPITAL LEDGER PROCESS -->
+    <section class="section" id="capital">
+        <div class="container">
+            <div class="section-label">Capital Recognition</div>
+            <h2>Supporting Standard Ledger Operations</h2>
+            <p>We assist partners with documentation for standard balance-sheet asset recognition. This follows established accounting procedures that banks perform routinely for capital contributions and asset transfers.</p>
+
+            <div class="process-box">
+                <h3>What Banks Are Asked To Do</h3>
+                <ol>
+                    <li>Review supporting documentation (booking instruction, attestations, deed of contribution)</li>
+                    <li>Verify asset description and ownership evidence</li>
+                    <li>Post standard debit/credit journal entry per internal policy</li>
+                    <li>Retain documentation in file for audit purposes</li>
+                    <li>Provide ledger reference number to submitting party</li>
+                </ol>
+                <p>This is the same internal booking process used daily for capital contributions, asset transfers, trust asset recognition, and intercompany postings. No special procedures or approvals beyond standard accounting controls.</p>
+            </div>
+
+            <div class="two-col">
+                <div class="col-box">
+                    <h4>Why This Process Is Reliable</h4>
+                    <p>For this standard process to fail, multiple independent systems would need to malfunction simultaneously:</p>
+                    <ul>
+                        <li>Applicable law ignored despite clear statutory authority</li>
+                        <li>IFRS accounting principles disregarded despite orthodox treatment</li>
+                        <li>Standard ministerial duties refused without basis</li>
+                        <li>Regulatory alignment reversed after approval</li>
+                        <li>Political alignment contradicted by operational execution</li>
+                    </ul>
+                    <p style="margin-top: 12px;">This combination does not occur in functioning institutions. The practical outcome is administrative processing — the only variable is timing, not result.</p>
+                </div>
+                <div class="col-box">
+                    <h4>Applicable Standards</h4>
+                    <p>All documentation follows recognition criteria under established frameworks:</p>
+                    <ul>
+                        <li><strong>IFRS 13</strong> — Fair Value Measurement</li>
+                        <li><strong>IAS 38</strong> — Intangible Assets</li>
+                        <li><strong>ASC 820</strong> — Fair Value (US GAAP)</li>
+                        <li><strong>ASC 350</strong> — Intangibles—Goodwill</li>
+                        <li><strong>OHADA</strong> — Uniform Acts (Africa)</li>
+                    </ul>
+                    <p style="margin-top: 12px;">Documentation is prepared to meet audit and compliance requirements across jurisdictions.</p>
+                </div>
+            </div>
+
+            <div class="process-box" style="margin-top: 24px; background: var(--white);">
+                <h3>Journal Entry Format</h3>
+                <table class="info-table" style="max-width: 400px;">
+                    <tr>
+                        <th>Account</th>
+                        <th>Debit</th>
+                        <th>Credit</th>
+                    </tr>
+                    <tr>
+                        <td>Asset Account</td>
+                        <td>[Amount]</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Capital Account</td>
+                        <td>—</td>
+                        <td>[Amount]</td>
+                    </tr>
+                </table>
+                <p>Standard double-entry accounting. The bank's accounting department posts this entry based on the documentation provided — the same process they follow for any capital contribution or asset transfer.</p>
+            </div>
+
+            <div class="scope-box" style="margin-top: 24px;">
+                <h4>Operational Reality</h4>
+                <p>This is not a probabilistic outcome — it is the execution of a standard ministerial accounting function. Banks perform these exact operations every day. Our role is simply to prepare the supporting documentation that enables their standard processes.</p>
             </div>
         </div>
     </section>
 
     <!-- IMPACT -->
-    <section class="section impact" id="impact">
+    <section class="section" id="impact">
         <div class="container">
-            <div class="section-header">
-                <div class="section-label">Our Impact</div>
-                <h2>Humanitarian Focus Areas</h2>
-                <p>30% of all capital deployed is mandatorily allocated to humanitarian programs across four focus areas.</p>
-            </div>
+            <div class="section-label">Humanitarian Focus</div>
+            <h2>30% Allocation to Humanitarian Programs</h2>
+            <p>Our partners commit to allocating 30% of recognized capital to humanitarian programs across four focus areas. This creates measurable impact in communities worldwide.</p>
+
             <div class="impact-grid">
                 <div class="impact-card">
                     <div class="impact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                     </div>
                     <h4>Healthcare</h4>
-                    <p>Hospitals, clinics, medical equipment, and healthcare worker training</p>
+                    <p>Hospitals, clinics, medical equipment, training</p>
                 </div>
                 <div class="impact-card">
                     <div class="impact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
                     </div>
                     <h4>Education</h4>
-                    <p>Schools, vocational training, scholarships, and educational technology</p>
+                    <p>Schools, vocational training, scholarships</p>
                 </div>
                 <div class="impact-card">
                     <div class="impact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                     </div>
                     <h4>Food Security</h4>
-                    <p>Agricultural development, food distribution, and sustainable farming</p>
+                    <p>Agriculture, distribution, sustainable farming</p>
                 </div>
                 <div class="impact-card">
                     <div class="impact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     </div>
                     <h4>Infrastructure</h4>
-                    <p>Clean water, electricity, transportation, and digital connectivity</p>
+                    <p>Clean water, electricity, connectivity</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROCESS -->
-    <section class="section process" id="process">
+    <!-- TEAM -->
+    <section class="section" id="team">
         <div class="container">
-            <div class="section-header">
-                <div class="section-label">Our Process</div>
-                <h2>How Capital Flows</h2>
-                <p>A transparent, auditable process from capital contribution to humanitarian impact.</p>
-            </div>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h4>Capital Contribution</h4>
-                    <p>Assets contributed and recognized on institutional balance sheet</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h4>Allocation</h4>
-                    <p>70% infrastructure investment, 30% humanitarian programs</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h4>Deployment</h4>
-                    <p>Capital deployed to vetted projects and programs</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h4>Impact Reporting</h4>
-                    <p>Transparent reporting on outcomes and utilization</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="section-label">Leadership</div>
+            <h2>Management Team</h2>
+            <p>Experienced professionals providing technical and operational support.</p>
 
-    <!-- ENTITY INFO -->
-    <section class="section entity-section" id="entity">
-        <div class="container">
-            <div class="entity-grid">
-                <div class="entity-info">
-                    <h3>Entity Information</h3>
-                    <table class="info-table">
-                        <tr>
-                            <th>Legal Name</th>
-                            <td>EquiSource Group LLC</td>
-                        </tr>
-                        <tr>
-                            <th>Jurisdiction</th>
-                            <td>Wyoming, United States</td>
-                        </tr>
-                        <tr>
-                            <th>Entity Type</th>
-                            <td>Limited Liability Company</td>
-                        </tr>
-                        <tr>
-                            <th>Entity ID</th>
-                            <td>2026-001873415</td>
-                        </tr>
-                        <tr>
-                            <th>Status</th>
-                            <td>Active</td>
-                        </tr>
-                        <tr>
-                            <th>Registered Office</th>
-                            <td>30 N Gould St, Ste R<br>Sheridan, WY 82801</td>
-                        </tr>
-                    </table>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar"><span>LP</span></div>
+                    <div class="team-info">
+                        <h4>Lucinda Parker</h4>
+                        <p>Paymaster & Member Manager</p>
+                    </div>
                 </div>
-                <div>
-                    <div class="compliance-box">
-                        <h4>Compliance & Standards</h4>
-                        <div class="compliance-list">
-                            <div class="compliance-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>IFRS 13 — Fair Value</span>
-                            </div>
-                            <div class="compliance-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>IAS 38 — Intangibles</span>
-                            </div>
-                            <div class="compliance-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>ASC 820 — US GAAP</span>
-                            </div>
-                            <div class="compliance-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>ASC 350 — Goodwill</span>
-                            </div>
-                            <div class="compliance-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Independent Audit Trail</span>
-                            </div>
-                            <div class="compliance-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Impact Reporting Standards</span>
-                            </div>
-                        </div>
+                <div class="team-card">
+                    <div class="team-avatar"><span>YL</span></div>
+                    <div class="team-info">
+                        <h4>Yolanda Lewis</h4>
+                        <p>Senior Engineer</p>
                     </div>
                 </div>
             </div>
@@ -1363,73 +580,52 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="section contact" id="contact">
+    <section class="section" id="contact">
         <div class="container">
+            <div class="section-label">Get In Touch</div>
+            <h2>Contact Us</h2>
+            <p>For partnership inquiries, documentation support, or general questions.</p>
+
             <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Contact Us</h3>
-                    <p>For partnership inquiries, documentation requests, or general information.</p>
-                    
+                <div>
+                    <div class="contact-item">
+                        <h5>Telephone</h5>
+                        <p><a href="tel:+18776040520">(877) 604-0520</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h5>Email</h5>
+                        <p><a href="mailto:Support@EquiSourceGroup.com">Support@EquiSourceGroup.com</a></p>
+                    </div>
                     <div class="contact-item">
                         <h5>Registered Office</h5>
-                        <p>EquiSource Group LLC<br>30 N Gould St, Ste R<br>Sheridan, WY 82801<br>United States</p>
+                        <p>Registered Agents Inc<br>30 N Gould St, Ste R<br>Sheridan, WY 82801<br>United States</p>
                     </div>
-                    
                     <div class="contact-item">
-                        <h5>General Inquiries</h5>
-                        <p>info@equisourcegroup.com</p>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <h5>Partnership Inquiries</h5>
-                        <p>partnerships@equisourcegroup.com</p>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <h5>Documentation</h5>
-                        <p>documentation@equisourcegroup.com</p>
+                        <h5>Entity Information</h5>
+                        <p>Wyoming LLC<br>Formed: January 20, 2026</p>
                     </div>
                 </div>
-                
-                <div class="contact-form-box">
-                    <h3>Submit Inquiry</h3>
-                    <form action="#" method="POST" onsubmit="handleSubmit(event)">
-                        <div class="form-row form-row-half">
-                            <div>
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div>
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="form-row form-row-half">
-                            <div>
-                                <label for="organization">Organization</label>
-                                <input type="text" id="organization" name="organization">
-                            </div>
-                            <div>
-                                <label for="role">Role</label>
-                                <input type="text" id="role" name="role">
-                            </div>
+
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-row">
-                            <label for="type">Inquiry Type</label>
-                            <select id="type" name="type">
-                                <option value="">Select...</option>
-                                <option value="partnership">Partnership Opportunity</option>
-                                <option value="investment">Investment Inquiry</option>
-                                <option value="documentation">Documentation Request</option>
-                                <option value="humanitarian">Humanitarian Programs</option>
-                                <option value="general">General Inquiry</option>
-                            </select>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization">
                         </div>
                         <div class="form-row">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Please describe your inquiry..."></textarea>
+                            <textarea id="message" name="message" placeholder="How can we support you?"></textarea>
                         </div>
-                        <button type="submit" class="form-submit">Submit Inquiry</button>
+                        <button type="submit" class="form-submit">Submit</button>
                     </form>
                 </div>
             </div>
@@ -1439,56 +635,25 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-inner">
                 <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <div class="logo-mark">
-                            <svg viewBox="0 0 100 120">
-                                <path d="M50 5 L95 35 L95 85 L50 115 L5 85 L5 35 Z" fill="rgba(255,255,255,0.1)"/>
-                                <text x="50" y="68" font-family="Merriweather, serif" font-size="36" font-weight="700" fill="#c4a96a" text-anchor="middle">E</text>
-                            </svg>
-                        </div>
+                    <a href="#top" class="logo">
+                        <div class="logo-mark"><span>E</span></div>
                         <div class="logo-text">
-                            <h1>EquiSource Group</h1>
+                            <h1 style="color: var(--white);">EquiSource Group, LLC</h1>
                         </div>
                     </a>
-                    <p>Financial infrastructure for humanitarian development. Mobilizing capital to create measurable social and economic impact across emerging markets.</p>
+                    <p>Technical support services for partners in humanitarian development and financial infrastructure.</p>
                 </div>
-                <div class="footer-col">
-                    <h5>Company</h5>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#impact">Impact</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h5>Services</h5>
-                    <ul>
-                        <li><a href="#services">Capital Recognition</a></li>
-                        <li><a href="#services">Settlement</a></li>
-                        <li><a href="#services">Infrastructure</a></li>
-                        <li><a href="#services">Humanitarian</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h5>Resources</h5>
-                    <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Impact Reports</a></li>
-                        <li><a href="#">Technical Notes</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
+                <div class="footer-contact">
+                    <h5>Contact</h5>
+                    <p><a href="tel:+18776040520">(877) 604-0520</a></p>
+                    <p><a href="mailto:Support@EquiSourceGroup.com">Support@EquiSourceGroup.com</a></p>
+                    <p style="margin-top: 12px;">30 N Gould St, Ste R<br>Sheridan, WY 82801</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2026 EquiSource Group LLC. All rights reserved.</span>
-                <span>
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Compliance</a>
-                </span>
+                © 2026 EquiSource Group LLC. All rights reserved. · Wyoming LLC
             </div>
         </div>
     </footer>
@@ -1496,17 +661,14 @@
     <script>
         function handleSubmit(e) {
             e.preventDefault();
-            alert('Thank you for your inquiry. Our team will respond within 2 business days.');
+            alert('Thank you for your message. We will respond within 2 business days.');
             e.target.reset();
         }
-
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
             });
         });
     </script>
